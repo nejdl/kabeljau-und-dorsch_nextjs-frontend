@@ -1,0 +1,21 @@
+.download{
+    background-color: black; 
+    width: 100%;
+    padding: var(--gapL) var(--gapM);
+    line-height: 1;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.download img{
+    height: 50px;
+    width: auto;
+    padding-right: var(--gapS)
+}
+
+
+
+.downloadText{
+    padding-bottom: var(--gapS); 
+}

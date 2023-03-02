@@ -1,0 +1,31 @@
+.forwardButton, .backButton{
+    background-color: #000000;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 var(--gapS) 0 var(--gapM);
+    /* padding: var(--gapS) var(--gapS) var(--gapS) var(--gapM); */
+}
+
+.backButtonLink{
+    text-decoration: none;
+}
+
+.forwardButton .arrowImg{
+    margin: var(--gapXS) 0 0 0;
+    float: right;
+    width: 15px;
+    transform: rotate(180deg)
+}
+
+.backButton .arrowImg{
+    margin: var(--gapXS) var(--gapM) 0 0;
+    float: left;
+    width: 15px;
+}
+
+.backButton{
+}
+
+.forwardButton{
+    /* background-color: orange; */
+}

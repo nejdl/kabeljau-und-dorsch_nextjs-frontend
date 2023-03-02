@@ -1,0 +1,115 @@
+@value breakpoints: "../../styles/globals/breakpoints.css";
+@value mediaQueryMobileMenu from breakpoints;
+
+.navBar {
+    border-bottom: var(--borderSize) solid black;
+}
+
+.navBar > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex: 0 1 auto;
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+}
+
+.navBar > ul > a > li, .navBar > ul > div > a > li, .navBar > ul > div > li {
+    text-transform: uppercase;
+    border-left: var(--borderSize) solid black;
+    padding: 0px var(--gapS) 0px var(--gapS);
+}
+
+.navBar > ul > a:first-of-type > li {
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.navBar > ul > a , .navBar > ul > div > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+#logoSecondPart {
+    border-right: var(--borderSize) solid black !important;
+}
+
+#logoSecondPart.selected {
+    border-left: var(--borderSize) solid white !important;
+}
+
+.logo > a > li {
+    float: left;
+}
+
+.menuItems {
+    display: inline;
+    cursor: pointer;
+}
+
+.menuItemsContainer {
+    float: right;
+}
+
+.mobileMenuItemsContainer{
+    display: none;
+}
+
+.navBar > ul > div > a > li:hover{
+    background-color: grey;
+}
+
+@media (hover: hover) {
+    .navBar > ul > a > li:hover, .navBar > ul > div > li:hover {
+        background-color: grey;
+    }
+}
+
+@media mediaQueryMobileMenu {
+    .menuItemsContainer{
+        /* calculate variable vh for mobile with js */
+        height: calc((calc(var(--vh, 1vh) * 100)) - 21px);
+    }
+    .hideMobileMenu{
+        display: none !important;
+    }
+    .menuItems {
+        display: block;
+        width: 100vw;
+        /* calculate variable vh for mobile with js */
+        height: calc(((calc(var(--vh, 1vh) * 100)) - 21px)/6);
+        border-bottom: var(--borderSize) solid black;
+        font-size: var(--fontSizeS);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobileMenuItemsContainer .menuItems {
+        border-left: var(--borderSize) solid black;
+        font-size: var(--fontSizeXS);
+    }
+    .navBar > ul > div > a > li {
+        border-left: 0;
+    }
+    .menuItems:first-of-type {
+        border-top: var(--borderSize) solid black;
+    }
+    .menuItems:last-of-type {
+        border-bottom: 0;
+    }
+    .mobileMenuItemsContainer{
+        display: inline;
+        float: right;
+    }
+    .mobileMenuItemsContainer .menuItems{
+        display: inline;
+    }
+}

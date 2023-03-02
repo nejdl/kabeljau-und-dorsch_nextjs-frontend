@@ -1,0 +1,78 @@
+@value breakpoints: "../../styles/globals/breakpoints.css";
+@value mediaQueryMobile from breakpoints;
+
+a .filterOptionActive {
+    color: black;
+}
+
+.filterOptionActive:hover {
+    background-color: lightgrey;
+}
+
+.filterOptionDisabled{
+    color: lightgrey;
+    cursor: auto;
+}
+
+.filterOptionSelected {
+    background-color: black;
+    color: white;
+}
+
+a .filterOptionSelected {
+    color: white;
+}
+
+
+.filterOptionSelected:hover {
+    background-color: grey;
+}
+
+.filterOptionLetter:first-child{
+    padding: var(--gapXS) var(--gapM); 
+}
+
+.filterOptionLetter, .filterOption{
+    padding: var(--gapXS) var(--gapS); 
+    box-shadow:  inset 0 -0.5px 0 black , inset 0 0.5px 0 black;
+    border-right: var(--borderSize) solid black;
+    text-transform: uppercase;
+    min-width: 18px;
+    text-align: center;
+    display: inline-block;
+}
+
+.filterOption {
+    text-transform: uppercase;
+    width: auto;
+    /* text-align: center; */
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.filterOptionSeparator{
+    background-color: black;
+    color: white;
+    line-height: 1;
+    padding: var(--gapS) var(--gapS) var(--gapS) var(--gapM); 
+    border-bottom: var(--borderSize) solid black;  
+}
+
+.filterBar{
+    border-bottom: var(--borderSize) solid black;  
+    flex: 0 1 auto;
+
+}
+
+@media mediaQueryMobile {
+    .filterOptionActive:hover {
+        background-color: inherit;
+    }
+    
+    .filterOptionSelected:hover {
+        background-color: black;
+    }
+}
+
+    

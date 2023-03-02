@@ -1,0 +1,31 @@
+{
+  "name": "kabeljauunddorsch-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "fitty": "^2.3.2",
+    "install": "^0.13.0",
+    "latinize": "^0.4.1",
+    "nanoid": "^3.1.12",
+    "next": "9.5.1",
+    "postcss": "^7.0.32",
+    "postcss-modules-values": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-fittext": "^1.0.0",
+    "react-ga": "^3.2.1",
+    "react-h5-audio-player": "^3.4.1",
+    "react-markdown": "^4.3.1",
+    "react-responsive": "^8.1.0",
+    "react-split": "^2.0.9",
+    "sass": "^1.29.0"
+  }
+}

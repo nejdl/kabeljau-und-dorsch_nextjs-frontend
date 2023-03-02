@@ -1,0 +1,81 @@
+@value breakpoints: "../../styles/globals/breakpoints.css";
+@value mediaQueryMobile from breakpoints;
+
+.white {
+  /* color: grey; */
+  color: var(--textColorInverted);
+}
+
+.black {
+  color: black;
+}
+
+.container{
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  border-bottom: var(--borderSize) solid black;
+}
+
+.fullscreen{
+  height: 100%;
+}
+
+.backgroundImage{
+  margin: -15px -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  filter: blur(10px);
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+}
+
+.backgroundImageFullscreen{
+  filter: blur(10px);
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+  margin: -20px -20px;
+  height: calc(100% + 40px);
+  width: calc(100% + 40px);
+  /* for IE */
+  min-height: calc(100% + 40px);
+  min-width: calc(100% + 40px);
+}
+
+.container:hover .backgroundImage, .container:hover .backgroundImageFullscreen{
+  background-color: lightgrey;
+  filter: blur(0px) !important;
+}
+
+.container:hover {
+  background-color: lightgrey;
+}
+
+.title{
+  padding: 0 var(--gapS) var(--gapL) var(--gapM);
+  /* padding: 0 var(--gapS) var(--gapS) var(--gapS); */
+}
+
+.surtitle{
+  text-transform: uppercase;
+  line-height: 1;
+  padding: var(--gapS) var(--gapS) var(--gapS) var(--gapM); 
+}
+
+.singleSurtitle{
+  display: inline-block;
+  padding-right: var(--gapXL);
+}
+
+
+/* hack to avoid white edges on mobile when images are blurred */
+@media mediaQueryMobile{
+  
+  .backgroundImage, .backgroundImageFullscreen{
+    filter: blur(100px);
+    /* transition: filter 1s ease-in-out; */
+  }
+ 
+}

@@ -1,0 +1,54 @@
+.footer {
+    margin-top: calc(var(--borderSize)*-1);
+    border-top: var(--borderSize) solid black;
+}
+
+.footer > ul {
+    border-bottom: var(--borderSize) solid black;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex: 0 1 auto;
+    /* The above is shorthand for:
+    flex-grow: 0,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+    float: right;
+}
+
+.footer > ul > li {
+    display: inline;
+    border-left: var(--borderSize) solid black;
+    padding: 0px var(--gapS) 0px var(--gapS);
+}
+
+.footer > ul > li > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.footer > ul > li:hover {
+    background-color: grey;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.horizontalFooter > ul {
+    float: none;
+}
+
+.horizontalFooter > ul > li{
+    border-top: var(--borderSize) solid black;
+    border-left: 0px;
+    display: block;
+}
+
+.horizontalFooter > ul > li:first-child {
+    border-top: 0px;
+}

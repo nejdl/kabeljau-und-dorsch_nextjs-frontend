@@ -1,0 +1,27 @@
+@value sizes: '../../styles/globals/sizes.css';
+@value fontSizeLarge from sizes;
+
+.MenuTitle {
+    /* font-size: 12.5vw; */
+}
+
+.menuItem{
+
+}
+
+.menuContainer:hover {
+    background-color: transparent !important;
+}
+
+.menuContainer {
+    border: 0px !important;
+}
+
+.menuContainer > h1{
+    padding: var(--gapS) var(--gapXS);
+    line-height: 0.9;
+}
+
+.menuItemWithDiacritic {
+    line-height: 1.2 !important;
+}

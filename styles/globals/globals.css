@@ -1,0 +1,112 @@
+/* @value breakpoints: "./breakpoints.css";
+@value mediaQueryMobile, mediaQueryTablet, mediaQueryDesktop from breakpoints; */
+
+
+:root{
+  /* gap sizes */
+  --gapXS: 2px;
+  --gapS: 4px;
+  --gapM: 6px;
+  --gapL: 10px;
+  --gapXL: 30px;
+  /* --gapXL: 20px; */
+
+  /* font sizes */
+  --fontSizeXS: 16px;
+  --fontSizeS: 20px;
+  --fontSizeM: 25px;
+  --fontSizeL: 35px;
+
+  /* border */
+  --borderSize: 1px;
+
+  /* colors */
+  /* --textColorInverted: #e3e3e3; */
+  --textColorInverted: #eeeeee;
+  /* --textColorInverted: #ffffff; */
+}
+
+html,
+body {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-family: neue-haas-grotesk-text,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100%;
+}
+
+#__next{
+  height: 100%;
+}
+
+div, footer, nav {
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1;
+  margin: -3px 0 0 0;
+}
+
+/* set font-size to fix flickering on page change */
+h2 {
+  /* font-size: 5.22vw; */
+  /* font-size: 5.19vw; */
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 0 0;
+  transition: font-size 1000ms ease-out;
+}
+
+p {
+  padding: 0 0 1em 5px;
+  margin: 0;
+}
+p:last-of-type{
+  padding: 0 0 0 5px;
+}
+
+/* @media mediaQueryMobile { */
+@media screen and (max-width: 500px) {
+  h2 {
+    font-size: 10.4vw;
+  }
+}
+
+/* @media mediaQueryTablet { */
+@media screen and (min-width: 500px) and (max-width: 956px){
+  h2 {
+    font-size: 5.2vw;
+  }
+}
+  
+/* @media mediaQueryDesktop { */
+@media screen and (min-width: 965px){
+  h2 {
+    font-size: 5.225vw;
+  }
+}
+
+/* p {
+  padding: 0 0 0 5px;
+  margin: 0;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+/* lists */
+ul:first-of-type, ol:first-of-type{
+  margin-top: 0;
+}
+
+ol{
+  margin-left: var(--gapL);
+}
+
+ol *, ul * {
+  text-indent: 0;
+}

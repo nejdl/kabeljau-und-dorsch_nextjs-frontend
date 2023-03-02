@@ -1,0 +1,98 @@
+@value breakpoints: "../../styles/globals/breakpoints.css";
+@value mediaQueryMobile, mediaQueryTablet, mediaQueryDesktop from breakpoints;
+
+.main {
+    display: flex;
+    flex: 1 1 auto;
+    /* The above is shorthand for:
+    flex-grow: 1,
+    flex-shrink: 1,
+    flex-basis: auto
+    */
+    overflow: hidden;
+    /* opacity: 0.1;
+    transition: opacity 300ms ease; */
+    background-color: black;
+}
+
+.main.initialized {
+    /* opacity: 1; */
+}
+
+/* .subpage .side:first-of-type, */
+.side:first-of-type,
+.side:last-of-type {
+    width: calc(50% - 5px);
+}
+
+.side {
+    overflow: auto;
+    background-color: white;
+}
+
+/* blur transition */
+/* .main .side div {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+.main.initialized .side div {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: filter 200ms ease-in;
+    transition: -webkit-filter 200ms ease-in;
+} */
+
+.side:first-of-type {
+    margin-right: 10px;
+}
+
+.main.initialized .side:first-of-type {
+    margin-right: 0px;
+}
+
+.gutter {
+    /* background-color: black; */
+    background-color: transparent;
+    cursor: col-resize;
+    height: 100% !important;
+    width: 10px !important;
+  
+    /* background-repeat: no-repeat;
+    background-position: 50%; */
+    /* background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII='); */
+}
+
+
+.splitContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* height: 100%; */
+}
+
+@media mediaQueryMobile {
+    .splitContainer {
+        display: block;
+        /* flex-direction: row; */
+        /* height: 100%; */
+    }
+    .gutter {
+        cursor: row-resize;
+        width: 100% !important;
+        height: 10px  !important;
+      }
+
+    .side:first-of-type,
+    .side:last-of-type {
+        width: 100%;
+    }
+
+    .side:first-of-type {
+        margin-right: 0px;
+        /* padding-bottom: 10px; */
+    }
+    
+    .main.initialized .side:first-of-type {
+        margin-bottom: 0px;
+    }
+}

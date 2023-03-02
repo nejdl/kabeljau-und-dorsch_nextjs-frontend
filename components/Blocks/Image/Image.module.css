@@ -1,0 +1,17 @@
+.fullWidth{
+    width: 100%;
+}
+
+.halfWidth{
+    width: 50%;
+}
+
+.halfWidth img, .fullWidth img {
+    width: 100%;
+    display: block;
+}
+
+.imageSubtitle{
+    text-transform: uppercase;
+    padding: var(--gapS) var(--gapS) var(--gapS) var(--gapM); 
+}

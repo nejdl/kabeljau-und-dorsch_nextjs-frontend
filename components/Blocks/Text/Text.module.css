@@ -1,0 +1,64 @@
+@value breakpoints: "../../../styles/globals/breakpoints.css";
+@value mediaQueryMobile from breakpoints;
+
+.text{
+    font-size: var(--fontSizeM);
+    text-indent: 1em;
+}
+
+.infoText{
+    font-size: var(--fontSizeXS);
+    margin-left: 4em;
+}
+
+.text, .infoText {
+    line-height: 1.2;
+}
+
+.linkText, .quote{
+    padding: var(--gapL) var(--gapL) 1em var(--gapL);
+    text-align: center;
+}
+
+.linkText, .quote, .downloadText{
+    text-indent: 0;
+}
+
+.authorBio{
+    font-style: italic;
+}
+
+
+.text a {
+    color: grey;
+}
+
+.linkText a {
+    color: black !important;
+}
+
+.downloadText a{
+    color: white !important;
+}
+
+.quoteText{
+    /* font-style: italic; */
+}
+
+.quoteSource{
+    /* font-style: italic; */
+}
+
+.quoteText:before{
+   content: '»';
+}
+.quoteText:after{
+   content: '«';
+}
+
+
+@media mediaQueryMobile {
+    .text{
+        font-size: var(--fontSizeS);
+    }    
+}

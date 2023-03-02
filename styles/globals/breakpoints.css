@@ -1,0 +1,5 @@
+/* breakpoints */
+@value mediaQueryMobile: (max-width: 500px);
+@value mediaQueryMobileMenu: (max-width: 740px);
+@value mediaQueryTablet: (min-width: 500px) and (max-width: 956px);
+@value mediaQueryDesktop: (min-width: 956px);

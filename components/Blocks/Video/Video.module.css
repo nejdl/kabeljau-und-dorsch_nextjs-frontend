@@ -1,0 +1,17 @@
+@value breakpoints: "../../../styles/globals/breakpoints.css";
+@value mediaQueryMobile from breakpoints;
+
+.video{
+    text-transform: uppercase;
+}
+
+.video iframe{
+    width: 100%;
+    min-height: 400px;
+}
+
+@media mediaQueryMobile {
+    .video iframe{
+        min-height: 200px;
+    } 
+}
